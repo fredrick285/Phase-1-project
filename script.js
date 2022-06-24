@@ -103,43 +103,12 @@ function updateCartTotal() {
 }
 //about info
 
-//async function getInfo() {
-  //let url = ' http://localhost:3000';
-  //try {
-    //  let res = await fetch(url);
-      //return await res.json();
-  ///} catch (error) {
-      //console.log(error);
-  //}
-//}
-//async function renderInfo() {
-  //let about = await getUsers();
-  //let html = '';
-  //users.forEach(user => {
-    //  let htmlSegment = `<div class="user">
-      //                   <h2>${user.mission}<h2>
-        //                  <h2>${about.vision}</h2>
-          //                <div class="email"><a href="email:${user.email}">${user.email}</a></div>
-            //          </div>`;
-
-      //html += htmlSegment;
-  //});
-
- // let container = document.querySelector('.container');
- // container.innerHTML = html;
-//}
-
-//renderInfo();
-///const  aboutButton = document.getElementsByClassName('about')
-  //for (let i = 0; i < aboutButton.length; i++) {
-    //let button =renderInfo[i]
-      //button.addEventListener('click', )}
-      let aboutInfo={
+     let aboutInfo={
         "mission":"to thrive and be sole solar accesssories supplier",
         "vision":"make people lives easier"
       }
       async function loadInfo(){
-        return (await fetch(" http://localhost:3000/About"))
+        return (await fetch(" http://localhost:3000/About")).json();
       }
       document.addEventListener("DOMContentLoaded" , async()=>{
         let info=[];
@@ -149,30 +118,7 @@ function updateCartTotal() {
           console.log(e);
       }show(info);
     })
-// // Function to hide the loader
-// function hideloader() {
-//   document.getElementById('loading').style.display = 'none';
-// }
-// // Function to define innerHTML for HTML table
-// function show(data) {
-//   let tab = 
-//       `<tr>
-//         <th>Name</th>
-//         <th>Office</th>
-//         <th>Position</th>
-//         <th>Salary</th>
-//        </tr>`;
-  
-//   // Loop to access all rows 
-//   for (let r of data.list) {
-//       tab += `<tr> 
-//   <td>${r.name} </td>
-//   <td>${r.office}</td>
-//   <td>${r.position}</td> 
-//   <td>${r.salary}</td>          
-// </tr>`;
-//   }
-//   // Setting innerHTML as tab variable
+
 function show(info){
   document.getElementById("aboutNav").innerHTML = info;
   Object.keys(aboutInfo).forEach(item => {

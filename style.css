@@ -1,9 +1,6 @@
 /*font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
- /*@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
-@import url("https://fonts.googleapis.com/css?family=Metal+Mania") */
-
 :root{
     --main-color:#777;
     --text-color:#171427;
@@ -11,7 +8,7 @@
 }
 *{
     box-sizing: border-box;
-    font-family: Raleway;
+    font-family: serif;
     color: #777;
 }
 
@@ -19,14 +16,14 @@ html{
      margin: 0;
     padding: 0;
     min-height: 100%;
-    background-color: var(--bg-color)
+    background-color: transparent
     
 } 
 body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background-color: var(--main-color)
+    background-color: orchid
 }
 
 .nav ul {
